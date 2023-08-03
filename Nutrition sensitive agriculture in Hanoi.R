@@ -14,7 +14,25 @@
  Nutrion_sensitive_function <- function(x,varnames){
  
  ## Cost###
+  annual_cost <- land_taxes + 
+   labor_cost +
+   irrigation_cost +
+   electricity_cost +
+   fertilizer_cost +
+   seed_costs +
+   seedling_cost +
+   planting_material_cost +
+   equipment_cost +
+   animal_feed +
+   animal_health_care 
+  establishment_cost <- training_cost +
+   buying_land +
+   equipment_cost +
+   cow_purchase
+
+   
  
+ ## Final cost of each year
    final_cost <- vv(cost, var_CV = CV_value, n = number_of_years)
    
    final_benefit <- vv(benefit, var_CV = CV_value, n = number_of_years)
