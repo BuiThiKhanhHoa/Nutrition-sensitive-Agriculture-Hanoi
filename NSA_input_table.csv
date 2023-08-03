@@ -4,3 +4,21 @@ benefit,3,,8,posnorm,benefit of intervention
 number_of_years,10,,10,const,number of years simulation
 CV_value,0.1,,0.4,tnorm_0_1,Coefficient of variation for NSA
 discount_rate,6,,10,posnorm,Discount rate
+,,,,,
+land_taxes,6,,10,posnorm,Land taxes (million VND/yr)
+labor_cost,6,,10,posnorm,Labor costs(million VND/yr)
+irrigation_cost,6,,10,posnorm,Irrigation (million VND/yr)
+electricity_cost,6,,10,posnorm,Electric costs (million VND/yr)
+fertilizer_cost,6,,10,posnorm,Fertilizer costs (million VND/yr)
+seed_costs,6,,10,posnorm,Seed costs (million VND/yr)
+seedling_cost,6,,10,posnorm,Seedling costs (million VND/yr)
+planting_material_cost,6,,10,posnorm,Plant material costs (million VND/yr)
+equipment_cost,10,,20,posnorm,Equipment costs (million VND/yr)
+,,,,,
+animal_feed,3,,10,posnorm,Animal feed (million VND/yr)
+animal_health_care,1,,5,posnorm,Animal health care (million VND/yr)
+,,,,,
+training_cost,1,,5,posnorm,Initial training (million VND)
+buying_land,20,,2000,posnorm,Land purchase (million VND)
+equipment_cost,20,,200,posnorm,Equipment purchase (million VND)
+cow_purchase,60,,100,posnorm,Cow purchase costs (million VND)
