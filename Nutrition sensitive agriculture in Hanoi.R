@@ -94,7 +94,8 @@
  # women_status_improved
  # 
  # taste
- # 
+  
+ benefit <- 100 # just to have a value
    
    final_benefit <- vv(benefit, var_CV = CV_value, n = number_of_years)
    
