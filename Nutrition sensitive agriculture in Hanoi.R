@@ -11,8 +11,26 @@
  make_variables(estimate_read_csv(paste("NSA_input_table.csv")))
 
  ## Model
- Nutrion_sensitive_function <- function(x,varnames){
+ Nutrition_sensitive_function <- function(x,varnames){
  
+# For the farmer to get started they may need to buy land and cows etc.   
+   
+   # chance that they need land
+   total_land_cost <- chance_event(chance = need_to_buy_land, 
+                             value_if = buying_land, 
+                             value_if_not = 0)
+   
+   # chance that they need livestock
+   total_livestock_cost <- chance_event(chance = need_to_buy_livestock, 
+                                   value_if = livestock_purchase, 
+                                   value_if_not = 0)
+   
+   
+   establishment_cost <- training_cost +
+     total_land_cost +
+     equipment_cost +
+     total_livestock_cost 
+   
  ## Cost###
   annual_cost <- land_taxes + 
    labor_cost +
@@ -22,18 +40,18 @@
    seed_costs +
    seedling_cost +
    planting_material_cost +
-   equipment_cost +
+   equipment_upkeep_cost +
    animal_feed +
    animal_health_care 
-  establishment_cost <- training_cost +
-   buying_land +
-   equipment_cost +
-   cow_purchase
-
+  
    
+ final_cost <- vv(var_mean = annual_cost, 
+            var_CV = CV_value, 
+            n = number_of_years)
+ 
+ final_cost[1] <- establishment_cost
  
  ## Final cost of each year
-   final_cost <- vv(cost, var_CV = CV_value, n = number_of_years)
    
    final_benefit <- vv(benefit, var_CV = CV_value, n = number_of_years)
    
@@ -49,7 +67,7 @@
  }
  household_decision_results <-mcSimulation(
    estimate = estimate_read_csv("NSA_input_table.csv"),
-   model_function = Nutrion_sensitive_function,
+   model_function = Nutrition_sensitive_function,
    numberOfModelRuns = 1000,
    functionSyntax = "plainNames"
  ) 
