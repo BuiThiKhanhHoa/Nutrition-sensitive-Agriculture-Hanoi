@@ -1,0 +1,6 @@
+variable ,lower,median,upper,distribution,label
+cost ,1,,9,posnorm,Cost of intervention
+benefit,3,,8,posnorm,benefit of intervention
+number_of_years,10,,10,const,number of years simulation
+CV_value,0.1,,0.4,tnorm_0_1,Coefficient of variation for NSA
+discount_rate,6,,10,posnorm,Discount rate
