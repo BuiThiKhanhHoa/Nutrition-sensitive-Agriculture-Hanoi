@@ -34,24 +34,67 @@
  ## Cost###
   annual_cost <- land_taxes + 
    labor_cost +
+   organization_time_cost + # opportunity cost of HH time investment
    irrigation_cost +
    electricity_cost +
    fertilizer_cost +
-   seed_costs +
-   seedling_cost +
-   planting_material_cost +
+   planting_material_cost + # seeds, seedlings etc.
    equipment_upkeep_cost +
    animal_feed +
    animal_health_care 
   
-   
+  ## Final cost of each year
  final_cost <- vv(var_mean = annual_cost, 
             var_CV = CV_value, 
             n = number_of_years)
  
- final_cost[1] <- establishment_cost
+ ## Final costs of all years
+ # assign establishment costs to the first year
+ final_cost[1] <- establishment_cost + annual_cost
  
- ## Final cost of each year
+## Benefits
+
+ # After training how well do households do in managing the intervention
+ knowledge <- vv(var_mean = training_efficacy, 
+                 var_CV = CV_value, 
+                 n = number_of_years, 
+                 relative_trend = learning_effect)
+
+ ### Still working on this part #####
+ 
+ #  technical + 
+ #   food_prep + 
+ #   animal_raising + 
+ #   crop_cultivation 
+ # 
+ # 
+ # yield
+ # sale
+ # income
+ # 
+ # relationship, exchange
+ # 
+ # 
+ # healthy_diet
+ # healthy_diet_children
+ # healthy_diet_elderly
+ # healthy_diet_mothers
+ # 
+ # sustianable_food
+ # 
+ # diversity
+ # convenient
+ # time_savings_on_shopping
+ # time_savings_on_travel
+ # money_savings
+ # 
+ # green_space
+ # 
+ # gender
+ # women_status_improved
+ # 
+ # taste
+ # 
    
    final_benefit <- vv(benefit, var_CV = CV_value, n = number_of_years)
    

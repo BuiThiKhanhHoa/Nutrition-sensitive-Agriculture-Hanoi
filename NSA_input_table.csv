@@ -14,6 +14,7 @@ seed_costs,6,,10,posnorm,Seed costs (million VND/yr)
 seedling_cost,6,,10,posnorm,Seedling costs (million VND/yr)
 planting_material_cost,6,,10,posnorm,Plant material costs (million VND/yr)
 equipment_upkeep_cost,10,,20,posnorm,Equipment costs (million VND/yr)
+organization_time_cost,6,,10,posnorm,Organization time costs (million VND/yr)
 ,,,,,
 animal_feed,3,,10,posnorm,Animal feed (million VND/yr)
 animal_health_care,1,,5,posnorm,Animal health care (million VND/yr)
@@ -25,3 +26,6 @@ livestock_purchase,60,,100,posnorm,Cow purchase costs (million VND)
 ,,,,,
 need_to_buy_land,0.1,,0.3,tnorm_0_1,Chance to buy land (%)
 need_to_buy_livestock,0.1,,0.3,tnorm_0_1,Chance to buy livestock (%)
+,,,,,
+training_efficacy,0.5,,0.7,tnorm_0_1,Efficacy of the training (%)
+learning_effect,0.01,,0.2,tnorm_0_1,Learning effect (%/yr)
